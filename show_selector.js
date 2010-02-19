@@ -6,8 +6,8 @@
     function traverseAncestors(target, children) {
       children = (children || []);
   
-      if(target.parentNode == undefined || target.parentNode == null) {
-        children.unshift(target.tagName.toLowerCase());
+      if(target.tagName === "HTML") {
+        children.unshift("html");
         return children;
       }  
   
